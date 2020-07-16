@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   canvas.height = 500;
   const file = document.getElementById('uploaded-file')
 
-  document.getElementById('play-button').addEventListener('click', function () {
+  document.getElementsByClassName('play-button')[0].addEventListener('click', function () {
     let { reds, greens, blues } = pick();
     let red = 0;
     let green = 0;
@@ -24,9 +24,9 @@ document.addEventListener("DOMContentLoaded", function () {
       ctx.fillStyle = `rgba(${red}, ${green}, ${blue}, .7)`
       //let tone = Math.floor(100 + (reds.shift() / blues.shift()) * 50);
       console.log(tone)
-      ctx.fillRect(x, y, 500, 20)
+      ctx.fillRect(x, y, 500, 10)
       synth.triggerAttackRelease(tone, "16n");
-      y += 20;
+      y += 10;
       if (reds.length < 1) {
         clearInterval(interval)
       }
@@ -65,11 +65,11 @@ document.addEventListener("DOMContentLoaded", function () {
     let greenchunk = []
     let bluechunk = []
     
-    for (let j = 0; j < red.length; j+=10000) {
+    for (let j = 0; j < red.length; j+=5000) {
       let values = {
-        red: red.slice(j, (j + 9999)),
-        green: green.slice(j, (j + 9999)),
-        blue: blue.slice(j, (j + 9999)), 
+        red: red.slice(j, (j + 4999)),
+        green: green.slice(j, (j + 4999)),
+        blue: blue.slice(j, (j + 4999)), 
       }
       let redsum = values.red.reduce((previous, current) => current += previous);
       let greensum = values.green.reduce((previous, current) => current += previous);
