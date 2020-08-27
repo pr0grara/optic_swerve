@@ -18,7 +18,7 @@ allows a user to upload an image, convert the image's pixel data into tones of d
   -Reverse function where a user uploads audio and has it converted into something drawn on the canvas. Doing this in real-time and with a user adjustable algorithm opens up the use case of OpticSwerve to live performers.
 
 ## Walkthrough
-![Image of Site](https://github.com/sanaanymoe/MyTinerary/blob/master/screen_shot_2020-07-10_at_11.09.58_am.png)
+![Image of Site](https://github.com/pr0grara/optic_swerve/blob/master/images/optic_swerve.png)
  1. User uploads an image through File Reader.
  2. User clicks "play image".
  
